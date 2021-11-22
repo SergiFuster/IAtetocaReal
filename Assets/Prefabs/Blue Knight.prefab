@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203797385832316618}
   - component: {fileID: 203797385832316617}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,6 +45,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -91,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203797386125604398}
   - component: {fileID: 203797386125604397}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Leg Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,6 +128,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -172,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203797386127782092}
   - component: {fileID: 203797386127782083}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Leg Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,6 +211,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -253,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203797386495691495}
   - component: {fileID: 203797386495691488}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,6 +294,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -334,7 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203797386617809688}
   - component: {fileID: 203797386617809695}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,6 +380,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -418,7 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203797387191595764}
   - component: {fileID: 203797387191595755}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,6 +463,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -503,7 +515,7 @@ GameObject:
   - component: {fileID: 1888838832}
   - component: {fileID: 1584046052}
   - component: {fileID: 569263047}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Blue Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,6 +617,7 @@ MonoBehaviour:
   deathEffect: {fileID: 8882834092664154197, guid: 43e58a09770a414488a4edf9a2bb5ea7,
     type: 3}
   isKing: 0
+  displayedText: {fileID: 0}
 --- !u!114 &1584046052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,7 +737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203797387714615613}
   - component: {fileID: 203797387714615612}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,6 +772,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -805,7 +820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7056815886903038593}
   - component: {fileID: 1086544998643664606}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,6 +855,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

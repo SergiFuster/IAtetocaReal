@@ -7,10 +7,12 @@ public class Tile : MonoBehaviour
     private SpriteRenderer rend;
     public Color highlightedColor;
     public Color creatableColor;
+    private Color defaultColor;
 
     public LayerMask obstacles;
 
-    public bool isWalkable;
+    public bool walkable;
+    private bool isWalkable;
     public bool isCreatable;
 
     private GM gm;
@@ -25,6 +27,7 @@ public class Tile : MonoBehaviour
 		source = GetComponent<AudioSource>();
         gm = FindObjectOfType<GM>();
         rend = GetComponent<SpriteRenderer>();
+        defaultColor = rend.color;
 
     }
 
@@ -48,7 +51,7 @@ public class Tile : MonoBehaviour
 
     public void Reset()
     {
-        rend.color = Color.white;
+        rend.color = defaultColor;
         isWalkable = false;
         isCreatable = false;
     }

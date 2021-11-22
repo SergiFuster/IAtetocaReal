@@ -62,7 +62,7 @@ public class Unit : MonoBehaviour
         
         ResetWeaponIcon();
 
-        if (isSelected == true)
+        if (isSelected)
         {
             
             isSelected = false;
@@ -125,7 +125,7 @@ public class Unit : MonoBehaviour
 
         Tile[] tiles = FindObjectsOfType<Tile>();
         foreach (Tile tile in tiles) {
-            if (Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileSpeed)
+            if (Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileSpeed && tile.walkable)
             { // how far he can move
                 if (tile.isClear() == true)
                 { // is the tile clear from any obstacles
