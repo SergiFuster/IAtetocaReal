@@ -11,6 +11,8 @@ public class Unit : MonoBehaviour
     public int tileSpeed;
     public float moveSpeed;
 
+    private Vector3[] path;
+
     private GM gm;
 
     public int attackRadius;
@@ -154,10 +156,20 @@ public class Unit : MonoBehaviour
         }
     }
 
-    public void Move(Transform movePos)
+    public void Move(Vector3 movePos)
     {
         gm.ResetTiles();
-        StartCoroutine(StartMovement(movePos));
+        PathRequestManager.RequestPath(transform.position, movePos, OnPathFound);
+    }
+
+    public void OnPathFound(Vector3[] newPath, bool pathSuccesfull)
+    {
+        if (pathSuccesfull)
+        {
+            path = newPath;
+            StopCoroutine("StartMovement");
+            StartCoroutine("StartMovement");
+        }
     }
 
     void Attack(Unit enemy) {
@@ -246,17 +258,17 @@ public class Unit : MonoBehaviour
         }
     }
 
-    IEnumerator StartMovement(Transform movePos) { // Moves the character to his new position.
+    IEnumerator StartMovement() { // Moves the character to his new position.
 
-
-        while (transform.position.x != movePos.position.x) { // first aligns him with the new tile's x pos
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(movePos.position.x, transform.position.y), moveSpeed * Time.deltaTime);
-            yield return null;
-        }
-        while (transform.position.y != movePos.position.y) // then y
+        int index = 0;
+        while (index < path.Length)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, movePos.position.y), moveSpeed * Time.deltaTime);
-            yield return null;
+            while(transform.position != path[index])
+            {
+                transform.position = Vector2.MoveTowards(transform.position, path[index], moveSpeed * Time.deltaTime);
+                yield return null;
+            }
+            index += 1;
         }
 
         hasMoved = true;
@@ -264,6 +276,8 @@ public class Unit : MonoBehaviour
         GetEnemies();
         gm.MoveInfoPanel(this);
     }
+
+
 
 
 

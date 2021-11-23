@@ -6,7 +6,6 @@ using UnityEngine;
 public class Pathfinding : MonoBehaviour
 {
     PathRequestManager requestManager;
-
     GridNode grid;
     private void Awake()
     {
@@ -79,6 +78,7 @@ public class Pathfinding : MonoBehaviour
         {
             waypoints = RetracePath(startNode, endNode);
         }
+        
         requestManager.FinishedProcessingPath(waypoints, pathSuccess);
     }
 
@@ -92,7 +92,7 @@ public class Pathfinding : MonoBehaviour
             path.Add(currentNode);
             currentNode = currentNode.parent;
         }
-
+        
         Vector3[] waypoints = SimplifyPath(path);
         Array.Reverse(waypoints);
         return waypoints;
@@ -111,6 +111,7 @@ public class Pathfinding : MonoBehaviour
             }
             directionOld = directionNew;
         }
+        grid.path = newPath; //ERASE THIS WHEN PATHFINDING HAVE BEEN DONE
         return newPath.ToArray(); 
     }
 

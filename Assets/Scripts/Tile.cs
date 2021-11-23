@@ -64,7 +64,7 @@ public class Tile : MonoBehaviour
     private void OnMouseDown()
     {
         if (isWalkable == true) {
-            gm.selectedUnit.Move(this.transform);
+            gm.selectedUnit.Move(this.transform.position);
         } else if (isCreatable == true && gm.createdUnit != null) {
             Unit unit = Instantiate(gm.createdUnit, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
             unit.hasMoved = true;

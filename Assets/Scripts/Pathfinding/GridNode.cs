@@ -6,6 +6,7 @@ public class GridNode : MonoBehaviour
 {
     public LayerMask unwalkableMask;
     public Node[,] grid;
+    public List<Vector3> path;
     public bool showNodes;
     public float nodeRadius;
     public Vector3 gridWorldSize;
@@ -87,20 +88,39 @@ public class GridNode : MonoBehaviour
         {
             foreach (Node n in grid)
             {
-                if (n == playerNode)
+                if(path == null)
                 {
-                    Gizmos.color = Color.black;
-                    Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
-                }
-                else if (n.walkable)
-                {
-                    Gizmos.color = Color.blue;
-                    Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+                    if (n.walkable)
+                    {
+                        Gizmos.color = Color.blue;
+                        Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+                    }
+                    else
+                    {
+                        Gizmos.color = Color.red;
+                        Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+                    }
                 }
                 else
                 {
-                    Gizmos.color = Color.red;
-                    Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+                    if (path.Contains(n.worldPosition))
+                    {
+                        Gizmos.color = Color.black;
+                        Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+                    }
+                    else
+                    {
+                        if (n.walkable)
+                        {
+                            Gizmos.color = Color.blue;
+                            Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+                        }
+                        else
+                        {
+                            Gizmos.color = Color.red;
+                            Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+                        }
+                    }
                 }
             }
         }
