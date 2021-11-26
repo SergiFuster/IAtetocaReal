@@ -14,7 +14,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Secondary FoW
   - Tile
   - Obstacle
   - 
@@ -48,4 +48,7 @@ TagManager:
     locked: 0
   - name: Sky
     uniqueID: 537989683
+    locked: 0
+  - name: Secondary FoW
+    uniqueID: 254027605
     locked: 0

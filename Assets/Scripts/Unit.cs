@@ -15,6 +15,8 @@ public class Unit : MonoBehaviour
 
     private GM gm;
 
+    private GridNode grid;
+
     public int attackRadius;
     public bool hasAttacked;
     public List<Unit> enemiesInRange = new List<Unit>();
@@ -28,12 +30,11 @@ public class Unit : MonoBehaviour
     public int attackDamage;
     public int defenseDamage;
     public int armor;
-
     public DamageIcon damageIcon;
 
     public int cost;
-
-	public GameObject deathEffect;
+    Tile[] tiles;
+    public GameObject deathEffect;
 
 	private Animator camAnim;
 
@@ -45,10 +46,23 @@ public class Unit : MonoBehaviour
 
     private void Start()
     {
+        
 		source = GetComponent<AudioSource>();
 		camAnim = Camera.main.GetComponent<Animator>();
         gm = FindObjectOfType<GM>();
+        
+        grid = FindObjectOfType<GridNode>();
         UpdateHealthDisplay();
+        tiles = FindObjectsOfType<Tile>();
+
+        if(playerNumber == 1)
+        {
+            gm.playerVisibilityMap.InsertViewPoint(this.GetComponent<Unit>());
+        }
+        else
+        {
+            gm.IAVisibilityMap.InsertViewPoint(this.GetComponent<Unit>());
+        }
     }
 
     private void UpdateHealthDisplay ()
@@ -125,7 +139,7 @@ public class Unit : MonoBehaviour
             return;
         }
 
-        Tile[] tiles = FindObjectsOfType<Tile>();
+        grid.CreateGrid();
         foreach (Tile tile in tiles) {
             if (Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileSpeed && tile.walkable)
             { // how far he can move
@@ -223,7 +237,7 @@ public class Unit : MonoBehaviour
 
             GetWalkableTiles(); // check for new walkable tiles (if enemy has died we can now walk on his tile)
             gm.RemoveInfoPanel(enemy);
-            Destroy(enemy.gameObject);
+            enemy.DestroyMe();
         }
 
         if (health <= 0)
@@ -242,12 +256,17 @@ public class Unit : MonoBehaviour
 
             gm.ResetTiles(); // reset tiles when we die
             gm.RemoveInfoPanel(this);
-            Destroy(gameObject);
+            DestroyMe();
         }
 
         gm.UpdateInfoStats();
   
 
+    }
+
+    public void DestroyMe()
+    {
+        Destroy(gameObject);
     }
 
     public void ResetWeaponIcon() {

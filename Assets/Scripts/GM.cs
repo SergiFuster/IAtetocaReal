@@ -40,15 +40,28 @@ public class GM : MonoBehaviour
 
 	private AudioSource source;
 
-    private void Start()
+    [Header("Visibility Maps")]
+    public VisibilityMap playerVisibilityMap;
+    public VisibilityMap IAVisibilityMap;
+    public Vector3 gridWorldSize;
+    public bool showPlayerGrid;
+    public bool showIAGrid;
+    public float nodeRadius;
+
+    private void Awake()
     {
-		source = GetComponent<AudioSource>();
+        playerVisibilityMap = new VisibilityMap(gridWorldSize, showPlayerGrid, nodeRadius, transform.position-gridWorldSize / 2);
+        IAVisibilityMap = new VisibilityMap(gridWorldSize, showIAGrid, nodeRadius, transform.position - gridWorldSize / 2);
+        source = GetComponent<AudioSource>();
         camAnim = Camera.main.GetComponent<Animator>();
         GetGoldIncome(1);
     }
 
     private void Update()
     {
+        playerVisibilityMap.UpdateVisibilityMap();
+        IAVisibilityMap.UpdateVisibilityMap();
+
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("b")) {
             EndTurn();
         }
@@ -191,6 +204,35 @@ public class GM : MonoBehaviour
 
     public void RestartGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, gridWorldSize.y, gridWorldSize.z));
+
+        if (playerVisibilityMap != null && playerVisibilityMap.grid != null && showPlayerGrid)
+        {
+            foreach (VisibilityNode node in playerVisibilityMap.grid)
+            {
+                if (node.visible)
+                {
+                    Gizmos.color = Color.white;
+                    Gizmos.DrawCube(node.worldPosition, Vector3.one * (nodeRadius*2 - .1f));
+                }
+            }
+        }
+
+        if (IAVisibilityMap != null && IAVisibilityMap.grid != null && showIAGrid)
+        {
+            foreach (VisibilityNode node in IAVisibilityMap.grid)
+            {
+                if (node.visible)
+                {
+                    Gizmos.color = Color.yellow;
+                    Gizmos.DrawCube(node.worldPosition, Vector3.one * (nodeRadius * 2 - .1f));
+                }
+            }
+        }
     }
 
 

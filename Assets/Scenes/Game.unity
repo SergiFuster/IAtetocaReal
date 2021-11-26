@@ -2371,7 +2371,7 @@ PrefabInstance:
     - target: {fileID: 2536013330583250551, guid: bccb0457feebb4243a9ae383fdc742ee,
         type: 3}
       propertyPath: m_Name
-      value: Mercado
+      value: BlueMarket
       objectReference: {fileID: 0}
     - target: {fileID: 2536013331161229601, guid: bccb0457feebb4243a9ae383fdc742ee,
         type: 3}
@@ -3215,7 +3215,7 @@ PrefabInstance:
     - target: {fileID: 2536013330583250551, guid: a3b6810696840fd4d8fe2ceff39df31e,
         type: 3}
       propertyPath: m_Name
-      value: Trampa
+      value: BlueTrap
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b6810696840fd4d8fe2ceff39df31e, type: 3}
@@ -8966,8 +8966,8 @@ MonoBehaviour:
     m_Bits: 512
   path: []
   showNodes: 1
-  nodeRadius: 0.25
-  gridWorldSize: {x: 15.33, y: 7.17, z: 0}
+  nodeRadius: 0.5
+  gridWorldSize: {x: 15.01, y: 7.17, z: 0}
   player: {fileID: 360061869}
 --- !u!114 &810994971
 MonoBehaviour:
@@ -15623,6 +15623,10 @@ MonoBehaviour:
   createdVillage: {fileID: 0}
   blueVictory: {fileID: 243264726}
   darkVictory: {fileID: 1969939416}
+  gridWorldSize: {x: 15, y: 7, z: 0}
+  showPlayerGrid: 0
+  showIAGrid: 1
+  nodeRadius: 0.5
 --- !u!4 &1570414221
 Transform:
   m_ObjectHideFlags: 0
@@ -15631,7 +15635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570414219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 0, z: 0}
+  m_LocalPosition: {x: 4.97, y: 0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -26240,7 +26244,7 @@ PrefabInstance:
     - target: {fileID: 2536013330583250551, guid: 6fa75a018d02ab04483f8130ae9a9ebf,
         type: 3}
       propertyPath: m_Name
-      value: Muralla
+      value: BlueWall
       objectReference: {fileID: 0}
     - target: {fileID: 6159822450705169574, guid: 6fa75a018d02ab04483f8130ae9a9ebf,
         type: 3}
