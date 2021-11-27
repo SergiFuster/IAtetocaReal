@@ -40,9 +40,9 @@ public class GM : MonoBehaviour
 
 	private AudioSource source;
 
-    [Header("Visibility Maps")]
     public VisibilityMap playerVisibilityMap;
     public VisibilityMap IAVisibilityMap;
+    [Header("Visibility Maps")]
     public Vector3 gridWorldSize;
     public bool showPlayerGrid;
     public bool showIAGrid;

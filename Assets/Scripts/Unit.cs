@@ -14,6 +14,7 @@ public class Unit : MonoBehaviour
     private Vector3[] path;
 
     private GM gm;
+    private InfluenceMap map;
 
     private GridNode grid;
 
@@ -46,7 +47,7 @@ public class Unit : MonoBehaviour
 
     private void Start()
     {
-        
+        map = FindObjectOfType<InfluenceMap>();
 		source = GetComponent<AudioSource>();
 		camAnim = Camera.main.GetComponent<Animator>();
         gm = FindObjectOfType<GM>();
@@ -54,7 +55,7 @@ public class Unit : MonoBehaviour
         grid = FindObjectOfType<GridNode>();
         UpdateHealthDisplay();
         tiles = FindObjectsOfType<Tile>();
-
+        map.InsertToGeneratorsList(this.GetComponent<Unit>());
         if(playerNumber == 1)
         {
             gm.playerVisibilityMap.InsertViewPoint(this.GetComponent<Unit>());

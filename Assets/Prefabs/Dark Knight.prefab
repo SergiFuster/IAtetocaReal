@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699492360}
   - component: {fileID: 699492359}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446637797807270672}
   - component: {fileID: 4446637797807270687}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Leg Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446637797838685495}
   - component: {fileID: 4446637797838685494}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446637797977428395}
   - component: {fileID: 4446637797977428394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Leg Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446637798367313341}
   - component: {fileID: 4446637798367313340}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 794876514}
   - component: {fileID: 1771498148}
   - component: {fileID: 1562438027}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dark Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446637799418178268}
   - component: {fileID: 4446637799418178267}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446637799576711689}
   - component: {fileID: 4446637799576711688}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -818,7 +818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446637799645496060}
   - component: {fileID: 4446637799645496059}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}

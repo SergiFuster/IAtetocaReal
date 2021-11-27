@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626269172433722575}
   - component: {fileID: 626269172433722572}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arrows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626269172669966924}
   - component: {fileID: 626269172669966925}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626269172838342583}
   - component: {fileID: 626269172838342580}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626269172916920138}
   - component: {fileID: 626269172916920139}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Leg Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626269173125141461}
   - component: {fileID: 626269173125141460}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626269173612097961}
   - component: {fileID: 626269173612097960}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626269173619864356}
   - component: {fileID: 626269173619864357}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Leg Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 626269173632994739}
   - component: {fileID: 626269173632994738}
   - component: {fileID: 1547342092}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Blue Archer
   m_TagString: Archer
   m_Icon: {fileID: 0}
@@ -818,7 +818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626269174062472871}
   - component: {fileID: 626269174062472868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

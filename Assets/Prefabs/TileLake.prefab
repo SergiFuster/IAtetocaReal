@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3633953227940335340}
   - component: {fileID: 3633953227940335341}
   - component: {fileID: 4411834712425668535}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: TileLake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,9 +245,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
   creatableColor: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
+  influenceValue: 0
   obstacles:
     serializedVersion: 2
     m_Bits: 0
-  isWalkable: 0
+  walkable: 0
   isCreatable: 0
   amount: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3794267682628012381}
   - component: {fileID: 3794267682628012354}
   - component: {fileID: 3794267682628012380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TileRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,6 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
   creatableColor: {r: 0.9150943, g: 0.5480776, b: 0, a: 1}
+  influenceValue: 0
   obstacles:
     serializedVersion: 2
     m_Bits: 512

@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour
     public Color highlightedColor;
     public Color creatableColor;
     private Color defaultColor;
+    public float influenceValue = 0;
 
     public LayerMask obstacles;
 
@@ -101,5 +102,23 @@ public class Tile : MonoBehaviour
             sizeIncrease = false;
             transform.localScale -= new Vector3(amount, amount, amount);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if(influenceValue < 0)
+        {
+            Gizmos.color = new Color(0, 0, Mathf.Abs(influenceValue));
+        }
+        else if(influenceValue > 0)
+        {
+            Gizmos.color = new Color(influenceValue, 0, 0);
+        }
+        else
+        {
+            Gizmos.color = Color.black;
+        }
+
+        Gizmos.DrawCube(transform.position, Vector3.one);
     }
 }

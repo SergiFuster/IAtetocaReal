@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1642533359225339582}
   - component: {fileID: 1642533359225339583}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1642533359335901399}
   - component: {fileID: 1642533359335901396}
   - component: {fileID: 2057758935}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dark Bat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1642533359395298476}
   - component: {fileID: 1642533359395298477}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1642533359760755087}
   - component: {fileID: 1642533359760755086}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wing Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1642533359795958548}
   - component: {fileID: 1642533359795958551}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1642533360139370760}
   - component: {fileID: 1642533360139370763}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wing Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3633953227940335340}
   - component: {fileID: 3633953227940335347}
   - component: {fileID: 3633953227940335341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TileBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3633953227940335344}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.25, y: 5, z: 0}
   m_LocalScale: {x: 0.15, y: 0.1575, z: 0}
   m_Children: []
@@ -223,6 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.1981324, g: 1, b: 0, a: 1}
   creatableColor: {r: 0.9150943, g: 0.5480776, b: 0, a: 1}
+  influenceValue: 0
   obstacles:
     serializedVersion: 2
     m_Bits: 512

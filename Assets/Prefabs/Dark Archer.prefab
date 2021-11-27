@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3293640989569454432}
   - component: {fileID: 3293640989569454435}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3293640990085028631}
   - component: {fileID: 3293640990085028630}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Leg Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3293640991095487048}
   - component: {fileID: 3293640991095487051}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3293640991102313834}
   - component: {fileID: 3293640991102313835}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3293640991112652988}
   - component: {fileID: 3293640991112652991}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3293640991123725733}
   - component: {fileID: 3293640991123725732}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Leg Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 3293640991218369721}
   - component: {fileID: 3293640991218369726}
   - component: {fileID: 1411393258}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dark Archer
   m_TagString: Archer
   m_Icon: {fileID: 0}
@@ -737,7 +737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3293640991254917045}
   - component: {fileID: 3293640991254917066}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3293640991329011222}
   - component: {fileID: 3293640991329011217}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arrows
   m_TagString: Untagged
   m_Icon: {fileID: 0}

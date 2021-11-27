@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484875168978718720}
   - component: {fileID: 484875168978718721}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arm Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484875169019576553}
   - component: {fileID: 484875169019576552}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484875169633495418}
   - component: {fileID: 484875169633495419}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 484875169853229651}
   - component: {fileID: 484875169853229650}
   - component: {fileID: 1361933532}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dark King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484875169938893823}
   - component: {fileID: 484875169938893816}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484875170234199457}
   - component: {fileID: 484875170234199458}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484875170267085120}
   - component: {fileID: 484875170267085121}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Arm Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484875170324854394}
   - component: {fileID: 484875170324854393}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3633953227940335340}
   - component: {fileID: 3633953227940335347}
   - component: {fileID: 3633953227940335341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TileBridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
   creatableColor: {r: 0.9137255, g: 0, b: 0.7192721, a: 1}
+  influenceValue: 0
   obstacles:
     serializedVersion: 2
     m_Bits: 512
@@ -235,7 +236,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3633953227940335344}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0522ed99be46e1b4b8d30ab2669d2b32, type: 3}
   m_Name: 
