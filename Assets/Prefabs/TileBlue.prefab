@@ -223,6 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0.1981324, g: 1, b: 0, a: 1}
   creatableColor: {r: 0.9150943, g: 0.5480776, b: 0, a: 1}
+  playerNumber: 2
   influenceValue: 0
   obstacles:
     serializedVersion: 2

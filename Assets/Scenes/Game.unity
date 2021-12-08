@@ -15539,7 +15539,7 @@ MonoBehaviour:
   darkVictory: {fileID: 1969939416}
   gridWorldSize: {x: 15, y: 7, z: 0}
   showPlayerGrid: 0
-  showIAGrid: 1
+  showIAGrid: 0
   nodeRadius: 0.5
 --- !u!4 &1570414221
 Transform:
@@ -15975,8 +15975,7 @@ MonoBehaviour:
   UnitMask:
     serializedVersion: 2
     m_Bits: 8
-  propagationRadius: 2
-  generators: []
+  propagationRadius: 5
 --- !u!4 &1591237913
 Transform:
   m_ObjectHideFlags: 0

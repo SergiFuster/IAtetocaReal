@@ -96,7 +96,7 @@ public class CharacterCreation : MonoBehaviour
         Tile[] tiles = FindObjectsOfType<Tile>();
         foreach (Tile tile in tiles)
         {
-            if (tile.isClear())
+            if (tile.isClear() && tile.playerNumber == gm.playerTurn)
             {
                 tile.SetCreatable();
             }

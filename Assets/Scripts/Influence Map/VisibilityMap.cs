@@ -68,13 +68,13 @@ public class VisibilityMap
         viewPoints.Remove(_viewPoint);
     }
 
-    private List<VisibilityNode> GetNeighbourNodes(VisibilityNode node)
+    private List<VisibilityNode> GetNeighbourNodes(VisibilityNode node, int radius)
     {
         List<VisibilityNode> neighbours = new List<VisibilityNode>();
 
-        for (int x = -1; x <= 1; x++)
+        for (int x = -radius; x <= radius; x++)
         {
-            for (int y = -1; y <= 1; y++)
+            for (int y = -radius + Mathf.Abs(x); y <= radius - Mathf.Abs(x); y++)
             {
                 int checkX = node.gridX + x;
                 int checkY = node.gridY + y;
@@ -99,7 +99,7 @@ public class VisibilityMap
 
         foreach (Unit viewPoint in viewPoints)
         {
-            List<VisibilityNode> neighbours = GetNeighbourNodes(GetNodeFromWorldPosition(viewPoint.transform.position));
+            List<VisibilityNode> neighbours = GetNeighbourNodes(GetNodeFromWorldPosition(viewPoint.transform.position), viewPoint.attackRadius);
             foreach (VisibilityNode neighbour in neighbours)
             {
                 neighbour.visible = true;

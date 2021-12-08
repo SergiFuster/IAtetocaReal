@@ -55,7 +55,6 @@ public class Unit : MonoBehaviour
         grid = FindObjectOfType<GridNode>();
         UpdateHealthDisplay();
         tiles = FindObjectsOfType<Tile>();
-        map.InsertToGeneratorsList(this.GetComponent<Unit>());
         if(playerNumber == 1)
         {
             gm.playerVisibilityMap.InsertViewPoint(this.GetComponent<Unit>());
@@ -267,6 +266,10 @@ public class Unit : MonoBehaviour
 
     public void DestroyMe()
     {
+        if(playerNumber == 1)
+            gm.playerVisibilityMap.DeleteViewPoint(this.GetComponent<Unit>());
+        else
+            gm.IAVisibilityMap.DeleteViewPoint(this.GetComponent<Unit>());
         Destroy(gameObject);
     }
 

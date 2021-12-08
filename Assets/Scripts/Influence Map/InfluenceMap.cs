@@ -6,24 +6,12 @@ public class InfluenceMap : MonoBehaviour
 {
     public LayerMask UnitMask;
     public int propagationRadius;
-    public List<Unit> generators;
     Tile[] tiles;
 
     private void Start()
     {
         tiles = FindObjectsOfType<Tile>();
-        generators = new List<Unit>();
 
-    }
-
-    public void InsertToGeneratorsList(Unit unit)
-    {
-        generators.Add(unit);
-    }
-
-    public void DeleteFromGeneratorsList(Unit unit)
-    {
-        generators.Remove(unit);
     }
 
     private void LateUpdate()
@@ -43,12 +31,13 @@ public class InfluenceMap : MonoBehaviour
                     float distance = (unit.transform.position - tile.transform.position).magnitude;
                     if(unit.GetComponent<Unit>().playerNumber == 1)
                     {
-                        tile.influenceValue += 1 / distance;
+                        tile.influenceValue += 1/Mathf.Sqrt(1 + distance);
                     }
                     else
                     {
-                        tile.influenceValue -= 1 / distance;
+                        tile.influenceValue -= 1 / Mathf.Sqrt(1 + distance);
                     }
+                    tile.influenceValue = Mathf.Clamp(tile.influenceValue, -1, 1);
                 }
             }
         }

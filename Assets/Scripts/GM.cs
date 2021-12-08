@@ -209,26 +209,26 @@ public class GM : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, gridWorldSize.y, gridWorldSize.z));
-
+        
         if (playerVisibilityMap != null && playerVisibilityMap.grid != null && showPlayerGrid)
         {
+            Gizmos.color = new Color(0, 0, 0, 0.8f);
             foreach (VisibilityNode node in playerVisibilityMap.grid)
             {
-                if (node.visible)
+                if (!node.visible)
                 {
-                    Gizmos.color = Color.white;
-                    Gizmos.DrawCube(node.worldPosition, Vector3.one * (nodeRadius*2 - .1f));
+                    Gizmos.DrawCube(node.worldPosition, Vector3.one * (nodeRadius * 2 - .1f));
                 }
             }
         }
 
         if (IAVisibilityMap != null && IAVisibilityMap.grid != null && showIAGrid)
         {
+            Gizmos.color = new Color(0, 0, 0, 0.8f);
             foreach (VisibilityNode node in IAVisibilityMap.grid)
             {
-                if (node.visible)
+                if (!node.visible)
                 {
-                    Gizmos.color = Color.yellow;
                     Gizmos.DrawCube(node.worldPosition, Vector3.one * (nodeRadius * 2 - .1f));
                 }
             }

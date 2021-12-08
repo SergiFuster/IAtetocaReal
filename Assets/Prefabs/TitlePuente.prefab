@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3633953227940335347}
   - component: {fileID: 3633953227940335341}
   m_Layer: 0
-  m_Name: Titlelake
+  m_Name: TitlePuente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,10 +222,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedColor: {r: 0, g: 0.98221684, b: 1, a: 1}
   creatableColor: {r: 1, g: 0, b: 0.88475704, a: 1}
+  influenceValue: 0
   obstacles:
     serializedVersion: 2
     m_Bits: 512
-  isWalkable: 0
+  walkable: 0
   isCreatable: 0
   amount: 0.025
 --- !u!114 &3633953227940335341

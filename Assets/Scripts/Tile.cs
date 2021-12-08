@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour
     public Color highlightedColor;
     public Color creatableColor;
     private Color defaultColor;
+    public int playerNumber = 0;
     public float influenceValue = 0;
 
     public LayerMask obstacles;
@@ -104,19 +105,19 @@ public class Tile : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         if(influenceValue < 0)
         {
-            Gizmos.color = new Color(0, 0, Mathf.Abs(influenceValue));
+            Gizmos.color = new Color(0, 0, Mathf.Abs(influenceValue), 0.5f);
         }
         else if(influenceValue > 0)
         {
-            Gizmos.color = new Color(influenceValue, 0, 0);
+            Gizmos.color = new Color(influenceValue, 0, 0, 0.5f);
         }
         else
         {
-            Gizmos.color = Color.black;
+            Gizmos.color = new Color(0, 0, 0, 0);
         }
 
         Gizmos.DrawCube(transform.position, Vector3.one);
