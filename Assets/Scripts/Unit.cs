@@ -7,6 +7,8 @@ public class Unit : MonoBehaviour
 {
     public bool isSelected;
     public bool hasMoved;
+    public int visionRadius;
+    public bool fly;
 
     public int tileSpeed;
     public float moveSpeed;
@@ -138,21 +140,44 @@ public class Unit : MonoBehaviour
         if (hasMoved == true) {
             return;
         }
-
         grid.CreateGrid();
         foreach (Tile tile in tiles) {
-            if (Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileSpeed && tile.walkable)
+            float dist = Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y);
+            if (dist <= tileSpeed && tile.isClear() && tile.walkable)
             { // how far he can move
-                if (tile.isClear() == true)
-                { // is the tile clear from any obstacles
+                if (fly || !tile.isLake)
+                {
                     tile.Highlight();
                 }
-
-            }          
+            }
         }
     }
 
-    void GetEnemies() {
+    public List<Tile> IAGetWalkableTiles()
+    {
+        gm.selectedUnit = this;
+        grid.CreateGrid();
+        List<Tile> walkableTiles = new List<Tile>();
+        foreach (Tile tile in tiles)
+        {
+            float dist = Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y);
+            if (dist <= tileSpeed && tile.isClear() && tile.walkable)
+            { // how far he can move
+                if(fly)
+                {
+                    tile.Highlight();
+                    walkableTiles.Add(tile);
+                }
+                else if(!tile.isLake)
+                {
+                    tile.Highlight();
+                    walkableTiles.Add(tile);
+                }
+            }
+        }
+        return walkableTiles;
+    }
+    public void GetEnemies() {
     
         enemiesInRange.Clear();
 
@@ -186,7 +211,7 @@ public class Unit : MonoBehaviour
         }
     }
 
-    void Attack(Unit enemy) {
+    public void Attack(Unit enemy) {
         hasAttacked = true;
 
         int enemyDamege = attackDamage - enemy.armor;
@@ -293,7 +318,8 @@ public class Unit : MonoBehaviour
             }
             index += 1;
         }
-
+        Vector3 pos = new Vector3(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y), 0);
+        transform.position = pos;
         hasMoved = true;
         ResetWeaponIcon();
         GetEnemies();

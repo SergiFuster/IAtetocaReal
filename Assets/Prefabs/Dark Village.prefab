@@ -5154,6 +5154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelected: 0
   hasMoved: 0
+  visionRadius: 1
   tileSpeed: 0
   moveSpeed: 0
   attackRadius: 0

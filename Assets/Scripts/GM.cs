@@ -3,10 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class GM : MonoBehaviour
 {
-    public Unit selectedUnit;
+    public enum GameState
+    {
+        Early,
+        Mid,
+        End
+    }
+    public TextMeshProUGUI textGameState;
+    public Unit selectedUnit = null;
+    public static GM instance;
+    public GameState gameState;
+    public int roundNumber = 0;
+    public int toMidGame;
+    public int toLateGame;
+    IAGameMaster IAGM;
 
     public int playerTurn = 1;
 
@@ -50,6 +65,10 @@ public class GM : MonoBehaviour
 
     private void Awake()
     {
+        textGameState.text = "Early";
+        IAGM = FindObjectOfType<IAGameMaster>();
+        gameState = GameState.Early;
+        instance = this;
         playerVisibilityMap = new VisibilityMap(gridWorldSize, showPlayerGrid, nodeRadius, transform.position-gridWorldSize / 2);
         IAVisibilityMap = new VisibilityMap(gridWorldSize, showIAGrid, nodeRadius, transform.position - gridWorldSize / 2);
         source = GetComponent<AudioSource>();
@@ -133,7 +152,7 @@ public class GM : MonoBehaviour
         }
     }
 
-    void EndTurn() {
+    public void EndTurn() {
 		source.Play();
         camAnim.SetTrigger("shake");
 
@@ -156,9 +175,21 @@ public class GM : MonoBehaviour
         if (playerTurn == 1) {
             playerIcon.sprite = playerTwoIcon;
             playerTurn = 2;
+            IAGM.changeState("shopping");
         } else if (playerTurn == 2) {
             playerIcon.sprite = playerOneIcon;
             playerTurn = 1;
+            roundNumber++;
+            if (roundNumber == toMidGame)
+            {
+                textGameState.text = "Mid";
+                gameState = GameState.Mid;
+            }
+            else if (roundNumber == toLateGame)
+            {
+                textGameState.text = "Late";
+                gameState = GameState.End;
+            }
         }
 
         GetGoldIncome(playerTurn);

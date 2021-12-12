@@ -44,7 +44,7 @@ public class VisibilityMap
         }
     }
 
-    private VisibilityNode GetNodeFromWorldPosition(Vector3 worldPos)
+    public VisibilityNode GetNodeFromWorldPosition(Vector3 worldPos)
     {
         float percentY = ((worldPos.x - centerWorldPosition.x) + gridWorldSize.x / 2) / gridWorldSize.x;
         float percentX = ((worldPos.y - centerWorldPosition.y) + gridWorldSize.y / 2) / gridWorldSize.y;
@@ -99,7 +99,7 @@ public class VisibilityMap
 
         foreach (Unit viewPoint in viewPoints)
         {
-            List<VisibilityNode> neighbours = GetNeighbourNodes(GetNodeFromWorldPosition(viewPoint.transform.position), viewPoint.attackRadius);
+            List<VisibilityNode> neighbours = GetNeighbourNodes(GetNodeFromWorldPosition(viewPoint.transform.position), viewPoint.visionRadius);
             foreach (VisibilityNode neighbour in neighbours)
             {
                 neighbour.visible = true;

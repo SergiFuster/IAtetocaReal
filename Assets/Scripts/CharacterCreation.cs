@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterCreation : MonoBehaviour
-{
+{ 
 
     GM gm;
 
@@ -52,6 +52,7 @@ public class CharacterCreation : MonoBehaviour
         } else if (unit.playerNumber == 2 && unit.cost <= gm.player2Gold)
         {
             player2Menu.SetActive(false);
+            print("BUYING: " + unit.name);
             gm.player2Gold -= unit.cost;
         } else {
             print("NOT ENOUGH GOLD, SORRY!");
